@@ -36,7 +36,7 @@ dh:
     realm: dh-money-users
     serverUrl: http://keycloak:8080
     clientId: api-dh-money
-    clientSecret: 2bgKXNvbhtpbEUux2QmNfUev6D5hzqA4
+    clientSecret: a1YNPyP177bheDTMBIVSkYgqJGLxkXfT
     tokenEndpoint: ${dh.keycloak.serverUrl}/realms/${dh.keycloak.realm}/protocol/openid-connect/token
     
 #Notebook: 9jvDMRt9K1cujgirQ5WUizCKIJ5pqA4V
