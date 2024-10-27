@@ -11,7 +11,7 @@ spring:
     url: jdbc:mysql://mysql:3306/dmhdatabase?createDatabaseIfNotExist=true&serverTimezone=UTC
     #url: jdbc:mysql://127.0.0.1:3306/accounts-service-db
     username: root
-    password: admin
+    password: 12345678
     driverClassName: com.mysql.cj.jdbc.Driver
   security:
     oauth2:
@@ -36,7 +36,7 @@ dh:
     realm: dh-money-users
     serverUrl: http://keycloak:8080
     clientId: api-dh-money
-    clientSecret: 2bgKXNvbhtpbEUux2QmNfUev6D5hzqA4
+    clientSecret: a1YNPyP177bheDTMBIVSkYgqJGLxkXfT
     tokenEndpoint: ${dh.keycloak.serverUrl}/realms/${dh.keycloak.realm}/protocol/openid-connect/token
     
 management:
