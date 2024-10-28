@@ -26,9 +26,9 @@ spring:
             scope: openid
             realm: ${dh.keycloak.realm}
             serverUrl: ${dh.keycloak.serverUrl}
-        provider:
-        keycloak:
-          issuer-uri: ${dh.keycloak.serverUrl}/realms/${dh.keycloak.realm}
+                provider:
+          keycloak:
+            issuer-uri: ${dh.keycloak.serverUrl}/realms/${dh.keycloak.realm}
         resourceserver:
           jwt:
             issuer-uri: ${dh.keycloak.serverUrl}/realms/${dh.keycloak.realm}
