@@ -32,13 +32,13 @@ spring:
             issuer-uri: ${dh.keycloak.serverUrl}/realms/${dh.keycloak.realm}
         resourceserver:
           jwt:
-            issuer-uri: ${dh.keycloak.serverUrl}/realms/${dh.keycloak.realm}
-            jwk-set-uri: ${dh.keycloak.serverUrl}/realms/${dh.keycloak.realm}/protocol/openid-connect/certs
+            issuer-uri: http://localhost:8080/realms/dh-money-users
+            jwk-set-uri: http://localhost:8080/realms/dh-money-users/protocol/openid-connect/certs
 
 dh:
   keycloak:
     realm: dh-money-users
-    serverUrl: http://keycloak:8080
+    serverUrl: http://localhost:8080
     clientId: api-dh-money
     clientSecret: eZ7LtbIyw308tEuJp5iBOyhuZtyB58B2
     tokenEndpoint: ${dh.keycloak.serverUrl}/realms/${dh.keycloak.realm}/protocol/openid-connect/token
