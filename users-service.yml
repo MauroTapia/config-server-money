@@ -34,7 +34,7 @@ spring:
 dh:
   keycloak:
     realm: dh-money-users
-    serverUrl: http://localhost:8080
+    serverUrl: http://localhost:8080/
     clientId: api-dh-money
     clientSecret: eZ7LtbIyw308tEuJp5iBOyhuZtyB58B2
     tokenEndpoint: http://localhost:8080/realms/dh-money-users/protocol/openid-connect/token
