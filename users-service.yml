@@ -16,7 +16,6 @@ spring:
       url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DB_NAME:dmhdatabase}?createDatabaseIfNotExist=true&serverTimezone=UTC
       username: ${MYSQL_USER:root}
       password: ${MYSQL_PASSWORD:12345678}
-      driverClassName: com.mysql.cj.jdbc.Driver
   security:
     oauth2:
       client:
