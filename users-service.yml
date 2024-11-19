@@ -1,18 +1,19 @@
 spring:
   application:
     name: users-service
+  datasource:
+    url: jdbc:mysql://mysql:3306/dmhdatabase?createDatabaseIfNotExist=true&serverTimezone=UTC
+    username: root
+    password: 12345678
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
     properties:
-      hibernate.event.merge.entity_copy_observer: allow
-    datasource:
-      #url: jdbc:mysql://127.0.0.1:3306/user-service-db
-      url: jdbc:mysql://mysql:3306/dmhdatabase?createDatabaseIfNotExist=true&serverTimezone=UTC
-      username: root
-      password: 12345678
-      driverClassName: com.mysql.cj.jdbc.Driver
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        event.merge.entity_copy_observer: allow
   security:
     oauth2:
       client:
