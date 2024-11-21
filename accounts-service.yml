@@ -13,7 +13,8 @@ spring:
             entity_copy_observer: allow
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DB_NAME:dmhdatabase}?createDatabaseIfNotExist=true&serverTimezone=UTC
+    url: jdbc:mysql://mysql:3306/dmhdatabase?createDatabaseIfNotExist=true&serverTimezone=UTC
+    #url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DB_NAME:dmhdatabase}?createDatabaseIfNotExist=true&serverTimezone=UTC
     username: ${MYSQL_USER:root}
     password: ${MYSQL_PASSWORD:12345678}
   security:
@@ -37,7 +38,7 @@ spring:
 dh:
   keycloak:
     realm: dh-money-users
-    serverUrl: http://localhost:8080
+    serverUrl: http://keycloak:8080
     clientId: api-dh-money
     clientSecret: eZ7LtbIyw308tEuJp5iBOyhuZtyB58B2
     tokenEndpoint: ${dh.keycloak.serverUrl}/realms/${dh.keycloak.realm}/protocol/openid-connect/token
@@ -63,7 +64,6 @@ eureka:
     healthCheckUrlPath: http://localhost:8082/actuator/health
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-
+      defaultZone: http://eureka-server:8761/eureka/
 server:
   port: 8082
